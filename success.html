@@ -18,16 +18,18 @@
   <div id="nav-bar"></div>
   <script>
     $(function(){
-      $("#nav-bar").load("./nav.html");
+      $(document).ready(function() {
+        $("#nav-bar").load("nav.html");
+      });
     });
   </script>
 
   <section>
 
-    <h6>¡Hemos recibido tu solicitud de valoración correctamente!</h6> <br>
+    <h4>¡Hemos recibido tu solicitud de valoración correctamente!</h4>
     <p>En 24h recibirás un email con una estimación del valor de tu vivienda.</p> <br>
 
-    <button name="finalizar" onClick="location.href = 'form.html';">Volver a la página principal</button>
+    <button name="finalizar" class="button-large button-primary" onClick="location.href = 'form.html';">Volver a la página principal</button>
 
     <hr>
 
