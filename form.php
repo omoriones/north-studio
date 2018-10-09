@@ -5,18 +5,13 @@
 </head>
 <body>
 
-  <nav>
-    Logo
-    <ul>
-      <li>Cómo funciona</li>
-      <li>Precio</li>
-      <li>FAQ</li>
-      <li>+34 902 734 050</li>
-    </ul>
-  </nav>
+  <!-- Barra de navegacion -->
+  <?php include("nav.php"); ?>
 
+  <!-- Formulario -->
   <section>
-    <form name="tasacion-vivienda">
+    <form name="tasacion-vivienda" action="email.php" method="post">
+
     <h1>Completa este formulario y recibe la tasación previa de tu vivienda en 24h. </h1>
 
 
@@ -91,10 +86,12 @@
     <hr>
 
     <button type="button" value="cancelar" onclick="">Cancelar</button>
-    <button type="button" value="continuar" onclick="">Continuar</button>
+    <button type="submit" value="continuar" onclick="">Continuar</button>
 
     </form>
     </section>
+
+    <div>Preguntas respondidas 0/8</div>
 
   </body>
 </html>
