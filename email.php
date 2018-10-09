@@ -5,17 +5,16 @@
 </head>
 <body>
 
-  <nav>
-    Logo
-  </nav>
+  <!-- Barra de navegacion -->
+  <?php include("nav.php"); ?>
 
   <section>
-    <form name="email" action="success.html" method="post">
+    <form name="email" action="success.php" method="post">
 
     <h6>Ya casi has terminado, ¡Un último paso!</h6> <br>
     <p>¡Déjanos tu correo y en 24h recibirás un email con una estimación del valor de tu vivienda!</p> <br>
 
-    <input type="text" name="email" id="email"> <button type="button" value="finalizar" onclick="">Finalizar</button>
+    <input type="text" name="email" id="email"> <button type="submit" value="finalizar" onclick="">Finalizar</button>
 
     <hr>
 
