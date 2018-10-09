@@ -27,7 +27,7 @@
     <h6>¡Hemos recibido tu solicitud de valoración correctamente!</h6> <br>
     <p>En 24h recibirás un email con una estimación del valor de tu vivienda.</p> <br>
 
-    <a href="form.html">Volver a la página principal</button>
+    <button name="finalizar" onClick="location.href = 'form.html';">Volver a la página principal</button>
 
     <hr>
 
