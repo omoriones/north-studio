@@ -1,5 +1,4 @@
 
-
 //Validacion Formulario
 function validateForm() {
 
@@ -84,6 +83,8 @@ function validateForm() {
 
     if (emptyFields > 0) {
       return false;
+    } else {
+      window.location = "email.html";
     }
 
 }
