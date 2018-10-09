@@ -1,19 +1,4 @@
-$(document).ready(function() {
 
-	//SHOW/HIDE HAMBURGUER OPTIONS
-	//showHideHamburgerOptions();
-
-});
-
-
-//SHOW/HIDE HAMBURGUER OPTIONS
-function showHideHamburgerOptions() {
-	if (window.matchMedia('screen and (max-width: 768px)').matches) {
-		$(".hamburger").show();
-	} else {
-		$(".hamburger").hide();
-	}
-}
 
 //Validacion Formulario
 function validateForm() {
@@ -97,9 +82,9 @@ function validateForm() {
       emptyFields = --emptyFields;
     }
 
-    /*if (emptyFields > 0) {
+    if (emptyFields > 0) {
       return false;
-    }*/
+    }
 
 }
 
