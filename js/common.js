@@ -81,11 +81,11 @@ function validateForm() {
       emptyFields = --emptyFields;
     }
 
-    if (emptyFields > 0) {
+    /*if (emptyFields > 0) {
       return false;
     } else {
       window.location = "email.html";
-    }
+    }*/window.location = "email.html";
 
 }
 
@@ -96,5 +96,7 @@ function validateEmail() {
   if (!filter.test($('#email').val())) {
     $("#error-message-12").removeClass("hidden");
     return false;
+  } else {
+    window.location = "success.html";
   }
 }
