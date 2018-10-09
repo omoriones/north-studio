@@ -5,17 +5,16 @@
 </head>
 <body>
 
-  <nav>
-    Logo
-  </nav>
+  <!-- Barra de navegacion -->
+  <?php include("nav.php"); ?>
 
   <section>
-    <form name="success" action="form.html" method="post">
+    <form name="success" action="form.php" method="post">
 
     <h6>¡Hemos recibido tu solicitud de valoración correctamente!</h6> <br>
     <p>En 24h recibirás un email con una estimación del valor de tu vivienda.</p> <br>
 
-    <button type="button" value="volver" onclick="">Volver a la página principal</button>
+    <button type="submit" value="volver" onclick="">Volver a la página principal</button>
 
     <hr>
 
