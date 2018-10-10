@@ -1,3 +1,19 @@
+$(document).ready(function() {
+
+	//SHOW/HIDE HAMBURGUER OPTIONS
+	//showHideHamburgerOptions();
+
+});
+
+
+//SHOW/HIDE HAMBURGUER OPTIONS
+function showHideHamburgerOptions() {
+	if (window.matchMedia('screen and (max-width: 768px)').matches) {
+		$(".hamburger").show();
+	} else {
+		$(".hamburger").hide();
+	}
+}
 
 //Validacion Formulario
 function validateForm() {
@@ -6,9 +22,9 @@ function validateForm() {
 
     if ($("#cp").val() == "") {
 			$("#cp").addClass("input-red");
-      $("#error-message-01").removeClass("hidden");
+      $("#error-message-cp").removeClass("hidden");
     } else {
-      $("#error-message-01").addClass("hidden");
+      $("#error-message-cp").addClass("hidden");
       emptyFields = --emptyFields;
     }
 
@@ -26,23 +42,27 @@ function validateForm() {
 
     if ($("#calle-numero").val() == "") {
 			$("#calle-numero").addClass("input-red");
-      $("#error-message-03").removeClass("hidden");
+      $("#error-message-calle-numero").removeClass("hidden");
     } else {
-      $("#error-message-03").addClass("hidden");
+      $("#error-message-calle-numero").addClass("hidden");
       emptyFields = --emptyFields;
     }
 
     if ($("#superficie").val() == "") {
 			$("#superficie").addClass("input-red");
-      $("#error-message-04").removeClass("hidden");
+      $("#error-message-superficie").removeClass("hidden");
     } else {
-      $("#error-message-04").addClass("hidden");
+      $("#error-message-superficie").addClass("hidden");
       emptyFields = --emptyFields;
     }
 
     if (!$("input:radio[name='num-habitaciones']").is(":checked")) {
-			$("#email").addClass("input-red");
       $("#error-message-05").removeClass("hidden");
+			$("label[for='num-habitaciones-1']").addClass("label-radio-empty");
+			$("label[for='num-habitaciones-2']").addClass("label-radio-empty");
+			$("label[for='num-habitaciones-3']").addClass("label-radio-empty");
+			$("label[for='num-habitaciones-4']").addClass("label-radio-empty");
+			$("label[for='num-habitaciones-5-mas']").addClass("label-radio-empty");
     } else {
       $("#error-message-05").addClass("hidden");
       emptyFields = --emptyFields;
@@ -129,8 +149,8 @@ function isFilled(id) {
 		//alert('VACIO');
 	} else {
 		//alert("LLENO");
-			$("#cp").removeClass("input-red");
-      $("#error-message-01").addClass("hidden");
+			$('#'+id).removeClass("input-red");
+      $("#error-message-"+id).addClass("hidden");
 
 	}
 }
@@ -175,6 +195,22 @@ function checkVenderPropiedad() {
 			$("label[for='vender-propiedad-3-a-6-meses']").removeClass("label-radio-empty");
 			$("label[for='vender-propiedad-sin-prisa']").removeClass("label-radio-empty");
       $("#error-message-11").addClass("hidden");
+    } else {
+			//alert('Please select one option in each question.');
+		}
+
+}
+
+function checkNumeroHabitaciones() {
+
+    if ($("input:radio[name='num-habitaciones']").is(":checked")) {
+			//alert('One radio in each group is checked.');
+			$("label[for='num-habitaciones-1']").removeClass("label-radio-empty");
+			$("label[for='num-habitaciones-2']").removeClass("label-radio-empty");
+			$("label[for='num-habitaciones-3']").removeClass("label-radio-empty");
+			$("label[for='num-habitaciones-4']").removeClass("label-radio-empty");
+			$("label[for='num-habitaciones-5-mas']").removeClass("label-radio-empty");
+      $("#error-message-05").addClass("hidden");
     } else {
 			//alert('Please select one option in each question.');
 		}
