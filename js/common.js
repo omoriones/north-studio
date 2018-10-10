@@ -13,8 +13,12 @@ function validateForm() {
     }
 
     if (!$("input:radio[name='tipo-vivienda']").is(":checked")) {
-			//$("#email").addClass("input-red");
-      $("#error-message-02").removeClass("hidden");
+		$("#error-message-02").removeClass("hidden");
+			$("label[for='tipo-vivienda-piso']").addClass("label-radio-empty");
+			$("label[for='tipo-vivienda-casa-chalet']").addClass("label-radio-empty");
+			$("label[for='tipo-vivienda-estudio']").addClass("label-radio-empty");
+			$("label[for='tipo-vivienda-atico']").addClass("label-radio-empty");
+			$("label[for='tipo-vivienda-duplex']").addClass("label-radio-empty");
     } else {
       $("#error-message-02").addClass("hidden");
       emptyFields = --emptyFields;
@@ -77,16 +81,22 @@ function validateForm() {
     }
 
     if (!$("input:radio[name='estado-propiedad']").is(":checked")) {
-			$("#email").addClass("input-red");
       $("#error-message-10").removeClass("hidden");
+			$("label[for='estado-propiedad-buen-estado']").addClass("label-radio-empty");
+			$("label[for='estado-propiedad-reforma-ligera']").addClass("label-radio-empty");
+			$("label[for='estado-propiedad-reforma-integral']").addClass("label-radio-empty");
+			$("label[for='estado-propiedad-obra-nueva']").addClass("label-radio-empty");
     } else {
       $("#error-message-10").addClass("hidden");
       emptyFields = --emptyFields;
     }
 
     if (!$("input:radio[name='vender-propiedad']").is(":checked")) {
-			$("#email").addClass("input-red");
       $("#error-message-11").removeClass("hidden");
+			$("label[for='vender-propiedad-antes-posible']").addClass("label-radio-empty");
+			$("label[for='vender-propiedad-3-meses']").addClass("label-radio-empty");
+			$("label[for='vender-propiedad-3-a-6-meses']").addClass("label-radio-empty");
+			$("label[for='vender-propiedad-sin-prisa']").addClass("label-radio-empty");
     } else {
       $("#error-message-11").addClass("hidden");
       emptyFields = --emptyFields;
@@ -127,11 +137,46 @@ function isFilled(id) {
 
 function checkTipoVivienda() {
 
-    if (!$("input:radio[name='vender-propiedad']").is(":checked")) {
-			alert('One radio in each group is checked.');
+    if ($("input:radio[name='tipo-vivienda']").is(":checked")) {
+			//alert('One radio in each group is checked.');
+			$("label[for='tipo-vivienda-piso']").removeClass("label-radio-empty");
+			$("label[for='tipo-vivienda-casa-chalet']").removeClass("label-radio-empty");
+			$("label[for='tipo-vivienda-estudio']").removeClass("label-radio-empty");
+			$("label[for='tipo-vivienda-atico']").removeClass("label-radio-empty");
+			$("label[for='tipo-vivienda-duplex']").removeClass("label-radio-empty");
       $("#error-message-02").addClass("hidden");
     } else {
-			alert('Please select one option in each question.');
+			//alert('Please select one option in each question.');
+		}
+
+}
+
+function checkEstadoPropiedad() {
+
+    if ($("input:radio[name='estado-propiedad']").is(":checked")) {
+			//alert('One radio in each group is checked.');
+			$("label[for='estado-propiedad-buen-estado']").removeClass("label-radio-empty");
+			$("label[for='estado-propiedad-reforma-ligera']").removeClass("label-radio-empty");
+			$("label[for='estado-propiedad-reforma-integral']").removeClass("label-radio-empty");
+			$("label[for='estado-propiedad-obra-nueva']").removeClass("label-radio-empty");
+      $("#error-message-10").addClass("hidden");
+    } else {
+			//alert('Please select one option in each question.');
+		}
+
+}
+
+function checkVenderPropiedad() {
+
+    if ($("input:radio[name='vender-propiedad']").is(":checked")) {
+			//alert('One radio in each group is checked.');
+			$("label[for='vender-propiedad-antes-posible']").removeClass("label-radio-empty");
+			$("label[for='vender-propiedad-3-meses']").removeClass("label-radio-empty");
+			$("label[for='vender-propiedad-3-a-6-meses']").removeClass("label-radio-empty");
+			$("label[for='vender-propiedad-sin-prisa']").removeClass("label-radio-empty");
+      $("#error-message-11").addClass("hidden");
+    } else {
+			//alert('Please select one option in each question.');
 		}
 
 }
