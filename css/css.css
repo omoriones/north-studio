@@ -119,6 +119,7 @@ input, select {
   font-size: 16px;
   border-radius: 2px;
   border: 1px solid #DEDEDE;
+  background-color: white;
   cursor: pointer;
   outline: none;
 	text-align: left;
@@ -126,6 +127,12 @@ input, select {
 
 input:focus, select:focus, input:hover, select:hover {
   border: 1px solid #1F8CEB;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 button {
@@ -166,8 +173,31 @@ label {
 
 .col-3 {
 	width: 28%;
+	padding: 10px 15px;
+	margin: 20px 20px;
+}
+.col-4 {
+	width: 18%;
 	padding: 10px;
 	margin: 20px 20px;
+}
+
+.col-6 {
+	width: 64%;
+	padding: 10px;
+	margin: 20px 20px;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.no-padding {
+	padding: 0;
+	margin: 0 20px;
+}
+
+.text-center {
   text-align: center;
 }
 
@@ -194,6 +224,10 @@ input[type="radio"]:checked + label {
   border-color: #1F8CEB;
 }
 
+input::-webkit-input-placeholder, option:disabled, select[disabled='disabled']  {
+  color: #B2BCC3;
+}
+
 .line {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -207,4 +241,17 @@ input[type="radio"]:checked + label {
 
 .input-red {
 	border-color: #FE5F5F;
+}
+
+.padding-right {
+	padding-right: 40px;
+}
+
+.input-container {
+	position: relative;
+	width: 50%;
+}
+
+.adjust-margin {
+	margin: -30px -30px;
 }
