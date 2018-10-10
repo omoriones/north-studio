@@ -27,22 +27,26 @@
   <!-- Formulario -->
   <section>
 
+    <div class="initial-space"></div>
+
     <h1>Completa este formulario y recibe la tasación previa de tu vivienda en 24h. </h1>
 
     <div class="question">
       <h4>1. ¿Cuál es tu código postal?</h4>
-      <input type="text" name="cp" id="cp">
+      <input type="text" name="cp" id="cp" oninput="isFilled('cp')">
       <div id="error-message-01" class="error-message hidden">Error text</div>
     </div>
 
 
     <div class="question">
       <h4>2. ¿Podrías especificar el tipo de vivienda?</h4>
-      <input type="radio" name="tipo-vivienda" value="piso" id="tipo-vivienda-piso"> <label for="tipo-vivienda-piso">Piso</label> <br>
-      <input type="radio" name="tipo-vivienda" value="casa-chalet" id="tipo-vivienda-casa-chalet"> <label for="tipo-vivienda-casa-chalet">Casa o chalet</label> <br>
-      <input type="radio" name="tipo-vivienda" value="estudio" id="tipo-vivienda-estudio"> <label for="tipo-vivienda-estudio">Estudio</label> <br>
-      <input type="radio" name="tipo-vivienda" value="atico" id="tipo-vivienda-atico"> <label for="tipo-vivienda-atico">Ático</label> <br>
-      <input type="radio" name="tipo-vivienda" value="duplex" id="tipo-vivienda-duplex"> <label for="tipo-vivienda-duplex">Dúplex</label> <br>
+      <div class="input-group-radio">
+        <input type="radio" name="tipo-vivienda" value="piso" id="tipo-vivienda-piso" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-piso" class="label-radio">Piso</label> <br>
+        <input type="radio" name="tipo-vivienda" value="casa-chalet" id="tipo-vivienda-casa-chalet" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-casa-chalet" class="label-radio">Casa o chalet</label> <br>
+        <input type="radio" name="tipo-vivienda" value="estudio" id="tipo-vivienda-estudio" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-estudio" class="label-radio">Estudio</label> <br>
+        <input type="radio" name="tipo-vivienda" value="atico" id="tipo-vivienda-atico" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-atico" class="label-radio">Ático</label> <br>
+        <input type="radio" name="tipo-vivienda" value="duplex" id="tipo-vivienda-duplex" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-duplex" class="label-radio">Dúplex</label> <br>
+      </div>
       <div id="error-message-02" class="error-message hidden">Error text</div>
     </div>
 
