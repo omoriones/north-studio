@@ -121,6 +121,7 @@ input, select {
   border: 1px solid #DEDEDE;
   cursor: pointer;
   outline: none;
+	text-align: left;
 }
 
 input:focus, select:focus, input:hover, select:hover {
@@ -140,7 +141,7 @@ button {
   outline: none;
 }
 
-.input-group-radio {
+.input-group {
 	display: flex;
 	flex-direction: row;
   flex-wrap: wrap;
@@ -161,14 +162,21 @@ label {
   border: 1px solid #D1D3D4;
   cursor: pointer;
   display: block;
-  text-align: center;
+}
+
+.col-3 {
 	width: 28%;
 	padding: 10px;
 	margin: 20px 20px;
+  text-align: center;
 }
 
 .label-radio:hover {
 	border-color: #1F8CEB;
+}
+
+.label-radio-empty {
+	border-color: #FE5F5F;
 }
 
 input[type="radio"]:checked + label {
