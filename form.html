@@ -34,7 +34,7 @@
     <div class="question">
       <h4>1. ¿Cuál es tu código postal?</h4>
       <div class="input-group">
-        <input type="text" name="cp" id="cp" oninput="isFilled('cp')" class="col-3">
+        <input type="text" name="cp" id="cp" oninput="isFilled('cp')" onfocusout="actualizarRespuestas('cp')" class="col-3">
       </div>
       <div id="error-message-cp" class="error-message hidden">Error text</div>
     </div>
@@ -49,7 +49,7 @@
         <input type="radio" name="tipo-vivienda" value="atico" id="tipo-vivienda-atico" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-atico" class="label-radio col-3 text-center">Ático</label> <br>
         <input type="radio" name="tipo-vivienda" value="duplex" id="tipo-vivienda-duplex" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-duplex" class="label-radio col-3 text-center">Dúplex</label> <br>
       </div>
-      <div id="error-message-02" class="error-message hidden">Error text</div>
+      <div id="error-message-tipo-vivienda" class="error-message hidden">Error text</div>
     </div>
 
 
@@ -65,7 +65,7 @@
 
       <div class="input-group">
         <label for="planta" class="col-3">Planta</label>
-        <select name="planta" id="planta" class="col-3">
+        <select name="planta" id="planta" class="classic col-3">
           <option value="" disabled selected>Selecciona una planta</option>
           <option value="planta1">1</option>
           <option value="planta2">2</option>
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="input-group flex-end">
-        <div id="error-message-05" class="error-message col-6 no-padding hidden">Error text</div>
+        <div id="error-message-num-habitaciones" class="error-message col-6 no-padding hidden">Error text</div>
       </div>
 
       <div class="input-group">
@@ -124,7 +124,7 @@
         </div>
       </div>
       <div class="input-group flex-end">
-        <div id="error-message-06" class="error-message col-6 no-padding hidden">Error text</div>
+        <div id="error-message-parking" class="error-message col-6 no-padding hidden">Error text</div>
       </div>
 
       <div class="input-group">
@@ -137,7 +137,7 @@
         </div>
       </div>
       <div class="input-group flex-end">
-        <div id="error-message-07" class="error-message col-6 no-padding  hidden">Error text</div>
+        <div id="error-message-terraza" class="error-message col-6 no-padding  hidden">Error text</div>
       </div>
 
       <div class="input-group">
@@ -150,7 +150,7 @@
         </div>
       </div>
       <div class="input-group flex-end">
-        <div id="error-message-08" class="error-message col-6 no-padding  hidden">Error text</div>
+        <div id="error-message-ascensor" class="error-message col-6 no-padding  hidden">Error text</div>
       </div>
 
     </div>
@@ -159,16 +159,19 @@
 
     <div class="question">
       <h4>5. ¿Cuando compraste la propiedad?</h4>
-      <label for="fecha-compra">Fecha de compra</label>
-      <select name="fecha-compra" id="fecha-compra">
-        <option value="">Selecciona una fecha</option>
-        <option value="25-06-2012">25 de Junio de 2012</option>
-        <option value="26-06-2012">26 de Junio de 2012</option>
-        <option value="27-06-2012">27 de Junio de 2012</option>
-        <option value="28-06-2012">28 de Junio de 2012</option>
-      </select>
-      <br>
-      <div id="error-message-09" class="error-message hidden">Error text</div>
+      <div class="input-group">
+        <label for="fecha-compra" class="col-3">Fecha de compra</label>
+        <select name="fecha-compra" id="fecha-compra" oninput="isFilled('superficie')" class="classic col-3 padding-right">
+          <option value="">Selecciona una fecha</option>
+          <option value="25-06-2012">25 de Junio de 2012</option>
+          <option value="26-06-2012">26 de Junio de 2012</option>
+          <option value="27-06-2012">27 de Junio de 2012</option>
+          <option value="28-06-2012">28 de Junio de 2012</option>
+        </select>
+      </div>
+      <div class="input-group flex-end">
+        <div id="error-message-fecha-compra" class="error-message col-6 no-padding hidden">Error text</div>
+      </div>
     </div>
 
 
@@ -180,7 +183,7 @@
         <input type="radio" name="estado-propiedad" value="reforma-integral" id="estado-propiedad-reforma-integral" onclick="checkEstadoPropiedad();"> <label for="estado-propiedad-reforma-integral" class="label-radio col-3 text-center">Reforma integral</label> <br>
         <input type="radio" name="estado-propiedad" value="obra-nueva" id="estado-propiedad-obra-nueva" onclick="checkEstadoPropiedad();"> <label for="estado-propiedad-obra-nueva" class="label-radio col-3 text-center">Obra nueva</label> <br>
       </div>
-      <div id="error-message-10" class="error-message hidden">Error text</div>
+      <div id="error-message-estado-propiedad" class="error-message hidden">Error text</div>
     </div>
 
 
@@ -192,17 +195,24 @@
         <input type="radio" name="vender-propiedad" value="3-a-6-meses" id="vender-propiedad-3-a-6-meses" onclick="checkVenderPropiedad();"> <label for="vender-propiedad-3-a-6-meses" class="label-radio col-3 text-center">De 3 a 6 meses</label> <br>
         <input type="radio" name="vender-propiedad" value="sin-prisa" id="vender-propiedad-sin-prisa" onclick="checkVenderPropiedad();"> <label for="vender-propiedad-sin-prisa" class="label-radio col-3 text-center">Sin prisa</label> <br>
       </div>
-      <div id="error-message-11" class="error-message hidden">Error text</div>
+      <div id="error-message-vender-propiedad" class="error-message hidden">Error text</div>
     </div>
 
     <div class="line"></div>
 
-    <button name="cancelar" onclick="emptyForm();">Cancelar</button>
-    <button name="continuar" type="submit" onclick="validateForm();" class="button-primary">Continuar</button>
+    <div class="question">
+      <button name="cancelar" onclick="emptyForm();">Cancelar</button>
+      <button name="continuar" type="submit" onclick="validateForm();" class="button-primary">Continuar</button>
+    </div>
 
     </section>
 
-    <div>Preguntas respondidas 0/8</div>
+    <div class="down-bar">
+      Preguntas respondidas <span class="text-bold"><span id="respuestas">0</span> / 8</span>
+    </div>
+
+
+    <div class="final-space"></div>
 
   </body>
 </html>
