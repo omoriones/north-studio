@@ -83,6 +83,10 @@ nav li {
 	height: 320px;
 }
 
+.final-space {
+	height: 120px;
+}
+
 h1 {
   font-family: 'Muli SemiBold';
   font-size: 50px;
@@ -123,6 +127,29 @@ input, select {
   cursor: pointer;
   outline: none;
 	text-align: left;
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select.classic {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #000000 50%),
+    linear-gradient(135deg, #000000 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1.2em + 2px),
+    calc(100% - 15px) calc(1.2em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
 }
 
 input:focus, select:focus, input:hover, select:hover {
@@ -254,4 +281,20 @@ input::-webkit-input-placeholder, option:disabled, select[disabled='disabled']  
 
 .adjust-margin {
 	margin: -30px -30px;
+}
+
+.down-bar {
+	width: 100%;
+	height: 49px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 10px 30px;
+	font-size: 14px;
+	position: fixed;
+	bottom: 0;
+}
+
+.text-bold {
+  font-family: 'Graphik Medium';
 }
