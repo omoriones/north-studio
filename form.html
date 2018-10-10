@@ -33,19 +33,21 @@
 
     <div class="question">
       <h4>1. ¿Cuál es tu código postal?</h4>
-      <input type="text" name="cp" id="cp" oninput="isFilled('cp')">
+      <div class="input-group">
+        <input type="text" name="cp" id="cp" oninput="isFilled('cp')">
+      </div>
       <div id="error-message-01" class="error-message hidden">Error text</div>
     </div>
 
 
     <div class="question">
       <h4>2. ¿Podrías especificar el tipo de vivienda?</h4>
-      <div class="input-group-radio">
-        <input type="radio" name="tipo-vivienda" value="piso" id="tipo-vivienda-piso" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-piso" class="label-radio">Piso</label> <br>
-        <input type="radio" name="tipo-vivienda" value="casa-chalet" id="tipo-vivienda-casa-chalet" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-casa-chalet" class="label-radio">Casa o chalet</label> <br>
-        <input type="radio" name="tipo-vivienda" value="estudio" id="tipo-vivienda-estudio" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-estudio" class="label-radio">Estudio</label> <br>
-        <input type="radio" name="tipo-vivienda" value="atico" id="tipo-vivienda-atico" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-atico" class="label-radio">Ático</label> <br>
-        <input type="radio" name="tipo-vivienda" value="duplex" id="tipo-vivienda-duplex" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-duplex" class="label-radio">Dúplex</label> <br>
+      <div class="input-group">
+        <input type="radio" name="tipo-vivienda" value="piso" id="tipo-vivienda-piso" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-piso" class="label-radio col-3">Piso</label> <br>
+        <input type="radio" name="tipo-vivienda" value="casa-chalet" id="tipo-vivienda-casa-chalet" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-casa-chalet" class="label-radio col-3">Casa o chalet</label> <br>
+        <input type="radio" name="tipo-vivienda" value="estudio" id="tipo-vivienda-estudio" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-estudio" class="label-radio col-3">Estudio</label> <br>
+        <input type="radio" name="tipo-vivienda" value="atico" id="tipo-vivienda-atico" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-atico" class="label-radio col-3">Ático</label> <br>
+        <input type="radio" name="tipo-vivienda" value="duplex" id="tipo-vivienda-duplex" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-duplex" class="label-radio col-3">Dúplex</label> <br>
       </div>
       <div id="error-message-02" class="error-message hidden">Error text</div>
     </div>
@@ -119,20 +121,24 @@
 
     <div class="question">
       <h4>6. ¿En qué estado se encuentra la propiedad?</h4>
-      <input type="radio" name="estado-propiedad" value="buen-estado" id="estado-propiedad-buen-estado"> <label for="estado-propiedad-buen-estado">Buen estado</label> <br>
-      <input type="radio" name="estado-propiedad" value="reforma-ligera" id="estado-propiedad-reforma-ligera"> <label for="estado-propiedad-reforma-ligera">Reforma ligera</label> <br>
-      <input type="radio" name="estado-propiedad" value="reforma-integral" id="estado-propiedad-reforma-integral"> <label for="estado-propiedad-reforma-integral">Reforma integral</label> <br>
-      <input type="radio" name="estado-propiedad" value="obra-nueva" id="estado-propiedad-obra-nueva"> <label for="estado-propiedad-obra-nueva">Obra nueva</label> <br>
+      <div class="input-group">
+        <input type="radio" name="estado-propiedad" value="buen-estado" id="estado-propiedad-buen-estado" onclick="checkEstadoPropiedad();"> <label for="estado-propiedad-buen-estado" class="label-radio col-3">Buen estado</label> <br>
+        <input type="radio" name="estado-propiedad" value="reforma-ligera" id="estado-propiedad-reforma-ligera" onclick="checkEstadoPropiedad();"> <label for="estado-propiedad-reforma-ligera" class="label-radio col-3">Reforma ligera</label> <br>
+        <input type="radio" name="estado-propiedad" value="reforma-integral" id="estado-propiedad-reforma-integral" onclick="checkEstadoPropiedad();"> <label for="estado-propiedad-reforma-integral" class="label-radio col-3">Reforma integral</label> <br>
+        <input type="radio" name="estado-propiedad" value="obra-nueva" id="estado-propiedad-obra-nueva" onclick="checkEstadoPropiedad();"> <label for="estado-propiedad-obra-nueva" class="label-radio col-3">Obra nueva</label> <br>
+      </div>
       <div id="error-message-10" class="error-message hidden">Error text</div>
     </div>
 
 
     <div class="">
       <h4>7. ¿Cuando te gustaría vender tu propiedad?</h4>
-      <input type="radio" name="vender-propiedad" value="antes-posible" id="vender-propiedad-antes-posible"> <label for="vender-propiedad-antes-posible">Lo antes posible</label> <br>
-      <input type="radio" name="vender-propiedad" value="3-meses" id="vender-propiedad-3-meses"> <label for="vender-propiedad-3-meses">En 3 meses</label> <br>
-      <input type="radio" name="vender-propiedad" value="3-a-6-meses" id="vender-propiedad-3-a-6-meses"> <label for="vender-propiedad-3-a-6-meses">De 3 a 6 meses</label> <br>
-      <input type="radio" name="vender-propiedad" value="sin-prisa" id="vender-propiedad-sin-prisa"> <label for="vender-propiedad-sin-prisa">Sin prisa</label> <br>
+      <div class="input-group">
+        <input type="radio" name="vender-propiedad" value="antes-posible" id="vender-propiedad-antes-posible" onclick="checkVenderPropiedad();"> <label for="vender-propiedad-antes-posible" class="label-radio col-3">Lo antes posible</label> <br>
+        <input type="radio" name="vender-propiedad" value="3-meses" id="vender-propiedad-3-meses" onclick="checkVenderPropiedad();"> <label for="vender-propiedad-3-meses" class="label-radio col-3">En 3 meses</label> <br>
+        <input type="radio" name="vender-propiedad" value="3-a-6-meses" id="vender-propiedad-3-a-6-meses" onclick="checkVenderPropiedad();"> <label for="vender-propiedad-3-a-6-meses" class="label-radio col-3">De 3 a 6 meses</label> <br>
+        <input type="radio" name="vender-propiedad" value="sin-prisa" id="vender-propiedad-sin-prisa" onclick="checkVenderPropiedad();"> <label for="vender-propiedad-sin-prisa" class="label-radio col-3">Sin prisa</label> <br>
+      </div>
       <div id="error-message-11" class="error-message hidden">Error text</div>
     </div>
 
