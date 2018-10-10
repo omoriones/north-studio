@@ -41,7 +41,10 @@ section {
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 30px;
-  background: url('../../images/background-image.png') 0 0 repeat-x;
+  background-image: url('../images/background-image.png');
+	background-position: 0 220px;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 nav {
@@ -56,6 +59,7 @@ nav ul {
   position: fixed;
   z-index: 1;
   padding-top: 15px;
+  box-shadow: 0 2px 4px 0px rgba(76, 76, 75, 0.1);
 }
 
 nav li {
@@ -68,13 +72,22 @@ nav li {
   float: right;
 }
 
+.logo {
+	width: 175px;
+	height: 30px;
+	background-color: #4C4C4B;
+	opacity: 0.5;
+}
+
+.initial-space {
+	height: 320px;
+}
 
 h1 {
   font-family: 'Muli SemiBold';
   font-size: 50px;
   line-height: 70px;
   letter-spacing: 0.15px;
-  padding-top: 250px;
   padding-bottom: 120px;
 }
 
@@ -83,6 +96,7 @@ h4 {
   font-size: 18px;
   line-height: 32px;
   letter-spacing: 0.05px;
+	margin-bottom: 40px;
 }
 
 .question {
@@ -95,6 +109,8 @@ h4 {
 
 .error-message {
   color: #FE5F5F;
+  line-height: 32px;
+  padding: 10px 0;
 }
 
 input, select {
@@ -124,8 +140,39 @@ button {
   outline: none;
 }
 
+.input-group-radio {
+	display: flex;
+	flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -20px;
+}
+
+input[type="radio"]:empty {
+  display: none;
+}
+
 label {
+	cursor: pointer;
+}
+
+.label-radio {
+  border-radius: 3px;
+  border: 1px solid #D1D3D4;
   cursor: pointer;
+  display: block;
+  text-align: center;
+	width: 28%;
+	padding: 10px;
+	margin: 20px 20px;
+}
+
+.label-radio:hover {
+	border-color: #1F8CEB;
+}
+
+input[type="radio"]:checked + label {
+  border-color: #1F8CEB;
 }
 
 .button-large {
@@ -148,4 +195,8 @@ label {
 .text-blue {
   color: #1F8CEB;
   font-family: 'Muli SemiBold';
+}
+
+.input-red {
+	border-color: #FE5F5F;
 }
