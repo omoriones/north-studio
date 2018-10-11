@@ -27,6 +27,7 @@
    padding: 0;
 }
 
+
 body {
   font-family: 'Graphik Regular';
   font-size: 16px;
@@ -38,7 +39,7 @@ body {
 
 section {
   position: relative;
-  max-width: 1040px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 30px;
   background-image: url('../images/background-image.png');
@@ -114,7 +115,7 @@ h4 {
 .error-message {
   color: #FE5F5F;
   line-height: 32px;
-  padding: 10px 0;
+  margin-bottom: 20px;
 }
 
 input, select {
@@ -129,7 +130,6 @@ input, select {
 	text-align: left;
   /* for Firefox */
   -moz-appearance: none;
-  /* for Chrome */
   -webkit-appearance: none;
 }
 
@@ -152,14 +152,42 @@ select.classic {
   background-repeat: no-repeat;
 }
 
+option
+{
+    color: #000;
+}
+option:first-child
+{
+    color: #ccc;
+}
+
 input:focus, select:focus, input:hover, select:hover {
   border: 1px solid #1F8CEB;
 }
 
+/* Remove spinner input number */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+/* Placeholder*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #B2BCC3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #B2BCC3;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #B2BCC3;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #B2BCC3;
 }
 
 button {
@@ -169,7 +197,7 @@ button {
   line-height: 32px;
   letter-spacing: 0.05px;
   background-color: #ffffff;
-  border-color: #DEDEDE;
+  border: 1px solid #DEDEDE;
   border-radius: 2px;
   cursor: pointer;
   outline: none;
@@ -180,7 +208,6 @@ button {
 	flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 -20px;
 }
 
 input[type="radio"]:empty {
@@ -188,6 +215,7 @@ input[type="radio"]:empty {
 }
 
 label {
+  padding-top: 9px;
 	cursor: pointer;
 }
 
@@ -196,32 +224,37 @@ label {
   border: 1px solid #D1D3D4;
   cursor: pointer;
   display: block;
+  padding: 10px 30px;
 }
 
 .col-3 {
 	width: 28%;
-	padding: 10px 15px;
-	margin: 20px 20px;
+	margin-right: 5%;
+	margin-bottom: 20px;
 }
+
 .col-4 {
-	width: 18%;
-	padding: 10px;
-	margin: 20px 20px;
+	width: 20%;
+	margin-right: 5%;
+	margin-bottom: 20px;
 }
 
 .col-6 {
 	width: 64%;
-	padding: 10px;
-	margin: 20px 20px;
+  margin-right: 2%;
+	margin-bottom: 20px;
+}
+
+.col-12 {
+	width: 100%;
 }
 
 .flex-end {
 	justify-content: flex-end;
 }
 
-.no-padding {
-	padding: 0;
-	margin: 0 20px;
+.no-margin {
+	margin: 0;
 }
 
 .text-center {
@@ -249,10 +282,6 @@ input[type="radio"]:checked + label {
   color: #ffffff;
   font-family: 'Graphik Medium';
   border-color: #1F8CEB;
-}
-
-input::-webkit-input-placeholder, option:disabled, select[disabled='disabled']  {
-  color: #B2BCC3;
 }
 
 .line {
@@ -297,4 +326,45 @@ input::-webkit-input-placeholder, option:disabled, select[disabled='disabled']  
 
 .text-bold {
   font-family: 'Graphik Medium';
+}
+
+#respuestas {
+	padding-left: 10px;
+}
+
+.margin-left {
+	margin-left: 40px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+	.input-group {
+    justify-content: space-between;
+	}
+	.col-3 {
+		width: 100%;
+		margin-right: 0;
+	}
+	.col-4 {
+		width: 47%;
+		margin-right: 0;
+	}
+	.col-6 {
+		width: 100%;
+		margin-right: 0;
+	}
+	.col-12 {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	label {
+		padding: 0;
+	}
+
+	.no-margin-bottom {
+		margin-bottom: 0;
+	}
+
+
 }
