@@ -15,14 +15,20 @@
 <body>
 
   <!-- Barra de navegacion -->
-  <div id="nav-bar"></div>
-  <script>
-    $(function(){
-      $(document).ready(function() {
-        $("#nav-bar").load("nav.html");
-      });
-    });
-  </script>
+  <div id="nav-bar">
+    <nav>
+      <ul>
+        <li><div class="logo"></div></li>
+        <div id="nav-bar-options" class="float-right">
+          <li>Cómo funciona</li>
+          <li>Precio</li>
+          <li>FAQ</li>
+          <li class="text-blue text-bold">+34 902 734 050</li>
+        </div>
+        <li id="hamburger" class="float-right"><div class="hamburger"><span></span></div></li>
+      </ul>
+    </nav>
+  </div>
 
   <section>
 
@@ -35,9 +41,15 @@
 
     <div class="line"></div>
 
-    <p>Si tienes cualquier pregunta, no dudes en llamarnos a +34 902 734 050.</p>
+    <p>Si tienes cualquier pregunta, no dudes en llamarnos a <span class="text-bold">+34 902 734 050.</span></p>
 
-    </section>
+  </section>
 
-  </body>
+  <div class="final-space"></div>
+
+  <div class="down-bar">
+    Preguntas respondidas <span class="text-bold">8 / 8</span>
+  </div>
+
+</body>
 </html>
