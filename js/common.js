@@ -1,17 +1,26 @@
 $(document).ready(function() {
 
-	//SHOW/HIDE HAMBURGUER OPTIONS
-	//showHideHamburgerOptions();
+	//Mostrar ocultar hamburger
+	mostrarOcultarHamburger();
+
+});
+
+$(window).resize(function() {
+
+	//Mostrar ocultar hamburger
+	mostrarOcultarHamburger();
 
 });
 
 
-//SHOW/HIDE HAMBURGUER OPTIONS
-function showHideHamburgerOptions() {
-	if (window.matchMedia('screen and (max-width: 768px)').matches) {
+//Mostrar ocultar hamburger
+function mostrarOcultarHamburger() {
+	if (window.matchMedia('screen and (max-width: 1024px)').matches) {
 		$(".hamburger").show();
+		$("#nav-bar-options").hide();
 	} else {
 		$(".hamburger").hide();
+		$("#nav-bar-options").show();
 	}
 }
 
@@ -95,7 +104,7 @@ function validateForm() {
       emptyFields = --emptyFields;
     }
 
-    if ($("#fecha-compra").val() === "") {
+    if ($("#fecha-compra option:selected").val() == "") {
 			$("#error-message-fecha-compra").removeClass("hidden");
 			$("#fecha-compra").addClass("input-red");
     } else {
@@ -258,7 +267,16 @@ function checkAscensor() {
 
 }
 
-function actualizarRespuestas(id) {
+function checkFechaCompra() {
+
+		if (!$("#fecha-compra option:selected").val() == "") {
+			$("#error-message-fecha-compra").addClass("hidden");
+			$("#fecha-compra").removeClass("input-red");
+    }
+
+}
+
+/*function actualizarRespuestas(id) {
 
 	var resp = $("#respuestas").text();
 
@@ -270,4 +288,8 @@ function actualizarRespuestas(id) {
 
 	$("#respuestas").text(resp);
 
+}*/
+
+function emptyForm() {
+	window.location = "form.html";
 }
