@@ -65,7 +65,7 @@ nav ul {
 
 nav li {
   display: block;
-  padding: 10px 25px;
+  padding: 10px 30px;
   float: left;
 }
 
@@ -381,7 +381,7 @@ input[type="radio"]:checked + label {
 	.hamburger {
 		display:  inline-block;
 		float: right;
-		width: 35px;
+		width: 27px;
 		height: 35px;
 		z-index: 10;
 		cursor: pointer;
