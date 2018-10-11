@@ -276,20 +276,6 @@ function checkFechaCompra() {
 
 }
 
-/*function actualizarRespuestas(id) {
-
-	var resp = $("#respuestas").text();
-
-	if ($('#'+id).val()) {
-		resp = parseInt(resp) + 1;
-	} else {
-		resp = parseInt(resp) - 1;
-	}
-
-	$("#respuestas").text(resp);
-
-}*/
-
 function emptyForm() {
 	window.location = "form.html";
 }
