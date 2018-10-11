@@ -31,14 +31,25 @@
     <h4>Ya casi has terminado, ¡Un último paso!</h4>
     <p>¡Déjanos tu correo y en 24h recibirás un email con una estimación del valor de tu vivienda!</p> <br>
 
-    <input type="text" name="email" id="email"> <button name="finalizar" type="submit" onclick="validateEmail();" class="button-primary">Finalizar</button>
-    <div id="error-message-12" class="error-message hidden">Error text</div>
+    <div class="input-group">
+      <input type="text" name="email" id="email" class="col-6">
+      <button name="finalizar" type="submit" onclick="validateEmail();" class="button-primary col-3">Finalizar</button>
+    </div>
+    <div class="input-group">
+      <div id="error-message-12" class="error-message col-12 no-padding hidden">Error text</div>
+    </div>
 
     <div class="line"></div>
 
-    <p>Si tienes cualquier pregunta, no dudes en llamarnos a +34 902 734 050.</p>
+    <p>Si tienes cualquier pregunta, no dudes en llamarnos a <span class="text-bold">+34 902 734 050.</span></p>
 
-    </section>
+  </section>
 
-  </body>
+  <div class="final-space"></div>
+
+  <div class="down-bar">
+    Preguntas respondidas <span class="text-bold">8 / 8</span>
+  </div>
+
+</body>
 </html>
