@@ -352,7 +352,7 @@ input[type="radio"]:checked + label {
 		width: 100%;
 		margin-right: 0;
 	}
-	.col-4 {
+	.col-4, .col-4-mobile {
 		width: 47%;
 		margin-right: 0;
 	}
@@ -371,6 +371,10 @@ input[type="radio"]:checked + label {
 
 	.no-margin-bottom {
 		margin-bottom: 0;
+	}
+
+	.margin-left {
+		margin-left: 0;
 	}
 
 	/* HAMBURGER */
