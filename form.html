@@ -10,6 +10,7 @@
   <!-- Librerias internas -->
 	<link rel="stylesheet" type="text/css" href="css/css.css" />
 	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
 
 </head>
 <body>
@@ -40,13 +41,13 @@
     <div class="question">
       <h4>1. ¿Cuál es tu código postal?</h4>
       <div class="input-group">
-        <input type="text" name="cp" id="cp" oninput="isFilled('cp')" class="col-3">
+        <input type="text" name="cp" id="cp" oninput="isFilled('cp');" class="col-3">
       </div>
       <div id="error-message-cp" class="error-message hidden">Error text</div>
     </div>
 
 
-    <div class="question">
+    <div id="question-02" class="question">
       <h4>2. ¿Podrías especificar el tipo de vivienda?</h4>
       <div class="input-group">
         <input type="radio" name="tipo-vivienda" value="piso" id="tipo-vivienda-piso" onclick="checkTipoVivienda();"> <label for="tipo-vivienda-piso" class="label-radio col-3 text-center">Piso</label> <br>
@@ -59,7 +60,7 @@
     </div>
 
 
-    <div class="question">
+    <div id="question-03" class="question">
       <h4>3. ¿Cuál es tu dirección?</h4>
       <div class="input-group">
         <label for="calle-numero" class="col-3">Calle y número</label>
@@ -123,7 +124,7 @@
         <div id="error-message-num-habitaciones" class="error-message col-6 hidden">Error text</div>
       </div>
 
-      <div class="input-group">
+      <div id="question-04-03" class="input-group">
         <p class="col-3">¿Dispone de parking?</p>
         <div class="col-6 no-margin">
           <div class="input-group">
@@ -137,7 +138,7 @@
         <div id="error-message-parking" class="error-message col-6 hidden">Error text</div>
       </div>
 
-      <div class="input-group">
+      <div id="question-04-04" class="input-group">
         <p class="col-3">¿Dispone de terraza o balcón?</p>
         <div class="col-6 no-margin">
           <div class="input-group">
@@ -151,7 +152,7 @@
         <div id="error-message-terraza" class="error-message col-6 hidden">Error text</div>
       </div>
 
-      <div class="input-group">
+      <div id="question-04-05" class="input-group">
         <p class="col-3">¿Dispone de ascensor?</p>
         <div class="col-6 no-margin">
           <div class="input-group">
@@ -169,7 +170,7 @@
 
 
 
-    <div class="question">
+    <div id="question-05" class="question">
       <h4>5. ¿Cuando compraste la propiedad?</h4>
       <div class="input-group">
         <label for="fecha-compra" class="col-3">Fecha de compra</label>
@@ -188,7 +189,7 @@
     </div>
 
 
-    <div class="question">
+    <div id="question-06" class="question">
       <h4>6. ¿En qué estado se encuentra la propiedad?</h4>
       <div class="input-group">
         <input type="radio" name="estado-propiedad" value="buen-estado" id="estado-propiedad-buen-estado" onclick="checkEstadoPropiedad();"> <label for="estado-propiedad-buen-estado" class="label-radio col-3 text-center">Buen estado</label> <br>
@@ -200,7 +201,7 @@
     </div>
 
 
-    <div class="">
+    <div id="question-07" class="">
       <h4>7. ¿Cuando te gustaría vender tu propiedad?</h4>
       <div class="input-group">
         <input type="radio" name="vender-propiedad" value="antes-posible" id="vender-propiedad-antes-posible" onclick="checkVenderPropiedad();"> <label for="vender-propiedad-antes-posible" class="label-radio col-3 text-center">Lo antes posible</label> <br>
@@ -213,10 +214,10 @@
 
     <div class="line"></div>
 
-    <div class="question">
+    <div id="question-end" class="question">
       <div class="input-group flex-end">
-        <button name="cancelar" onclick="emptyForm();">Cancelar</button>
-        <button name="continuar" type="submit" onclick="validateForm();" class="button-primary margin-left">Continuar</button>
+        <button name="cancelar" onclick="emptyForm();" class="col-4-mobile">Cancelar</button>
+        <button name="continuar" type="submit" onclick="validateForm();" class="button-primary margin-left col-4-mobile">Continuar</button>
       </div>
     </div>
 
