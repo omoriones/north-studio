@@ -4,18 +4,20 @@
 
   <meta charset="UTF-8">
 
-  <!-- jQuery -->
+  <!-- jQuery External Librery-->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-  <!-- Librerias internas -->
+  <!-- CSS Internal Libreries -->
 	<link rel="stylesheet" type="text/css" href="css/css.css" />
-	<script type="text/javascript" src="js/common.js"></script>
+
+  <!-- Javascript Internal Libreries -->
+	<script type="text/javascript" src="js/validate-form.js"></script>
 	<script type="text/javascript" src="js/scroll.js"></script>
 
 </head>
 <body>
 
-  <!-- Barra de navegacion -->
+  <!-- Navigation bar -->
   <div id="nav-bar">
     <nav>
       <ul>
@@ -31,13 +33,17 @@
     </nav>
   </div>
 
-  <!-- Formulario -->
+
+  <!-- Form -->
   <section>
 
     <div class="initial-space"></div>
 
     <h1>Completa este formulario y recibe la tasación previa de tu vivienda en 24h. </h1>
 
+
+    <!-- Question 1 -->
+    <!-- Codigo postal -->
     <div class="question">
       <h4>1. ¿Cuál es tu código postal?</h4>
       <div class="input-group">
@@ -47,6 +53,8 @@
     </div>
 
 
+    <!-- Question 2 -->
+    <!-- Tipo de vivienda -->
     <div id="question-02" class="question">
       <h4>2. ¿Podrías especificar el tipo de vivienda?</h4>
       <div class="input-group">
@@ -60,8 +68,13 @@
     </div>
 
 
+    <!-- Question 3 -->
+    <!-- Direccion -->
     <div class="question">
       <h4>3. ¿Cuál es tu dirección?</h4>
+
+      <!-- Question 3.1 -->
+      <!-- Calle y numero -->
       <div id="question-03-01" class="input-group">
         <label for="calle-numero" class="col-3">Calle y número</label>
         <input type="text" name="calle-numero" id="calle-numero" oninput="isFilled('calle-numero')" class="col-6"> <br>
@@ -71,6 +84,8 @@
         <div id="error-message-calle-numero" class="error-message col-6 hidden">Error text</div>
       </div>
 
+      <!-- Question 3.2 -->
+      <!-- Planta -->
       <div id="question-03-02" class="input-group">
         <label for="planta" class="col-3">Planta</label>
         <select name="planta" id="planta" class="classic col-3">
@@ -81,14 +96,23 @@
           <option value="planta4">4</option>
         </select>
       </div>
+
+      <!-- Question 3.3 -->
+      <!-- Bloque -->
       <div id="question-03-03" class="input-group">
         <label for="bloque" class="col-3">Bloque</label>
         <input type="text" name="bloque" id="bloque" placeholder="Opcional" class="col-3">
       </div>
+
+      <!-- Question 3.4 -->
+      <!-- Escalera -->
       <div id="question-03-04" class="input-group">
         <label for="escalera" class="col-3">Escalera</label>
         <input type="text" name="escalera" id="escalera" placeholder="Opcional" class="col-3">
       </div>
+
+      <!-- Question 3.5 -->
+      <!-- Puerta -->
       <div id="question-03-05" class="input-group">
         <label for="puerta" class="col-3">Puerta</label>
         <input type="text" name="puerta" id="puerta" placeholder="Opcional" class="col-3">
@@ -96,8 +120,13 @@
     </div>
 
 
+    <!-- Question 4 -->
+    <!-- Caracteristicas principales -->
     <div class="question">
       <h4>4. Características principales</h4>
+
+      <!-- Question 4.1 -->
+      <!-- Superficie -->
       <div id="question-04-01" class="input-group">
         <label for="superficie" class="col-3">Superfície</label>
         <input type="number" name="superficie" id="superficie" oninput="isFilled('superficie')" class="col-3 padding-right">
@@ -107,6 +136,8 @@
         <div id="error-message-superficie" class="error-message col-6 hidden">Error text</div>
       </div>
 
+      <!-- Question 4.2 -->
+      <!-- Numero de habitaciones -->
       <div id="question-04-02" class="input-group">
         <p class="col-3">Número de habitaciones</p>
         <div class="col-6 no-margin">
@@ -124,6 +155,8 @@
         <div id="error-message-num-habitaciones" class="error-message col-6 hidden">Error text</div>
       </div>
 
+      <!-- Question 4.3 -->
+      <!-- Parking -->
       <div id="question-04-03" class="input-group">
         <p class="col-3">¿Dispone de parking?</p>
         <div class="col-6 no-margin">
@@ -138,6 +171,8 @@
         <div id="error-message-parking" class="error-message col-6 hidden">Error text</div>
       </div>
 
+      <!-- Question 4.4 -->
+      <!-- Terraza -->
       <div id="question-04-04" class="input-group">
         <p class="col-3">¿Dispone de terraza o balcón?</p>
         <div class="col-6 no-margin">
@@ -152,6 +187,8 @@
         <div id="error-message-terraza" class="error-message col-6 hidden">Error text</div>
       </div>
 
+      <!-- Question 4.5 -->
+      <!-- Ascensor -->
       <div id="question-04-05" class="input-group">
         <p class="col-3">¿Dispone de ascensor?</p>
         <div class="col-6 no-margin">
@@ -169,7 +206,8 @@
     </div>
 
 
-
+    <!-- Question 5 -->
+    <!-- Fecha de compra -->
     <div id="question-05" class="question">
       <h4>5. ¿Cuando compraste la propiedad?</h4>
       <div class="input-group">
@@ -189,6 +227,8 @@
     </div>
 
 
+    <!-- Question 6 -->
+    <!-- Estado de propiedad -->
     <div id="question-06" class="question">
       <h4>6. ¿En qué estado se encuentra la propiedad?</h4>
       <div class="input-group">
@@ -201,6 +241,8 @@
     </div>
 
 
+    <!-- Question 7 -->
+    <!-- Vender propiedad -->
     <div id="question-07" class="">
       <h4>7. ¿Cuando te gustaría vender tu propiedad?</h4>
       <div class="input-group">
@@ -214,6 +256,8 @@
 
     <div class="line"></div>
 
+
+    <!-- Buttons -->
     <div id="question-end" class="question">
       <div class="input-group flex-end">
         <button name="cancelar" onclick="emptyForm();" class="col-4-mobile">Cancelar</button>
@@ -225,6 +269,8 @@
 
     <div class="final-space"></div>
 
+
+    <!-- Answered question bar -->
     <div class="down-bar">
       Preguntas respondidas <span class="text-bold"><span id="respuestas">0</span> / 8</span>
     </div>
