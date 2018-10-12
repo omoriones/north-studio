@@ -60,9 +60,9 @@
     </div>
 
 
-    <div id="question-03" class="question">
+    <div class="question">
       <h4>3. ¿Cuál es tu dirección?</h4>
-      <div class="input-group">
+      <div id="question-03-01" class="input-group">
         <label for="calle-numero" class="col-3">Calle y número</label>
         <input type="text" name="calle-numero" id="calle-numero" oninput="isFilled('calle-numero')" class="col-6"> <br>
       </div>
@@ -71,7 +71,7 @@
         <div id="error-message-calle-numero" class="error-message col-6 hidden">Error text</div>
       </div>
 
-      <div class="input-group">
+      <div id="question-03-02" class="input-group">
         <label for="planta" class="col-3">Planta</label>
         <select name="planta" id="planta" class="classic col-3">
           <option value="" disabled selected>Selecciona una planta</option>
@@ -81,15 +81,15 @@
           <option value="planta4">4</option>
         </select>
       </div>
-      <div class="input-group">
+      <div id="question-03-03" class="input-group">
         <label for="bloque" class="col-3">Bloque</label>
         <input type="text" name="bloque" id="bloque" placeholder="Opcional" class="col-3">
       </div>
-      <div class="input-group">
+      <div id="question-03-04" class="input-group">
         <label for="escalera" class="col-3">Escalera</label>
         <input type="text" name="escalera" id="escalera" placeholder="Opcional" class="col-3">
       </div>
-      <div class="input-group">
+      <div id="question-03-05" class="input-group">
         <label for="puerta" class="col-3">Puerta</label>
         <input type="text" name="puerta" id="puerta" placeholder="Opcional" class="col-3">
       </div>
@@ -98,7 +98,7 @@
 
     <div class="question">
       <h4>4. Características principales</h4>
-      <div class="input-group">
+      <div id="question-04-01" class="input-group">
         <label for="superficie" class="col-3">Superfície</label>
         <input type="number" name="superficie" id="superficie" oninput="isFilled('superficie')" class="col-3 padding-right">
       </div>
@@ -107,7 +107,7 @@
         <div id="error-message-superficie" class="error-message col-6 hidden">Error text</div>
       </div>
 
-      <div class="input-group">
+      <div id="question-04-02" class="input-group">
         <p class="col-3">Número de habitaciones</p>
         <div class="col-6 no-margin">
           <div class="input-group">
@@ -217,7 +217,7 @@
     <div id="question-end" class="question">
       <div class="input-group flex-end">
         <button name="cancelar" onclick="emptyForm();" class="col-4-mobile">Cancelar</button>
-        <button name="continuar" type="submit" onclick="validateForm();" class="button-primary margin-left col-4-mobile">Continuar</button>
+        <button id="continuar" name="continuar" type="submit" onclick="validateForm();" class="button-primary margin-left col-4-mobile">Continuar</button>
       </div>
     </div>
 
